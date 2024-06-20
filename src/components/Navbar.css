@@ -1,0 +1,17 @@
+.navbar{  
+    
+    width: 100vw;
+    height: 66px;  
+    top: -1px;  
+    background-color: #fff !important; 
+    display: flex;  
+    align-items: center;  
+}  
+
+.navbar_image {  
+    display: flex;
+    height: 28.89px !important;  
+    width: 137px;
+    margin-left: 30px; 
+}  
+  

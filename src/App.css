@@ -1,0 +1,17 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #949494;
+}
+
+.main-content {
+  /* margin-left: 200px;  */
+  background-color: #f4f4f4;
+  flex-grow: 1;
+  overflow-y: auto; 
+}
+.main-body{
+  display: flex;
+  flex-direction: row;
+}
