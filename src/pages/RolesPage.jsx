@@ -2,7 +2,7 @@
 import React from 'react';
 import { Checkbox, IconButton } from '@fluentui/react';
 import {  AcceptIcon, BlockedIcon } from '@fluentui/react-icons-mdl2';
-import { NoteEdit20Regular, Dismiss20Filled, Delete20Regular} from "@fluentui/react-icons";
+import { NoteEdit20Regular, Dismiss20Filled, Delete20Regular, Add20Filled } from "@fluentui/react-icons";
 import './Role.css';  
 
 const roles = [
@@ -17,8 +17,11 @@ const Role = () => {
   return (
     <div className='role-contents'>
         <div className='role-header'>
-            <h1>Roles</h1>
-            <button className='add-role-button'>Add New Roles</button>
+            <div><h1>Roles</h1></div>
+            <button className='add-role-button'>  
+                <Add20Filled className='add-icon' />  
+                Add New Roles  
+            </button>  
         </div>
         <table className="role-table">
             <thead>
@@ -36,10 +39,10 @@ const Role = () => {
                 {roles.map((role, index) => (
                     <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
                         <td><div>{role.role}</div></td>
-                        <td><div>{role.canView ? <AcceptIcon /> : <Dismiss20Filled />}</div></td>
-                        <td><div>{role.canEdit ? <AcceptIcon /> : <Dismiss20Filled />}</div></td>
-                        <td><div>{role.canExport ? <AcceptIcon /> : <Dismiss20Filled />}</div></td>
-                        <td><div>{role.canCreate ? <AcceptIcon /> : <Dismiss20Filled />}</div></td>
+                        <td><div>{role.canView ? <AcceptIcon /> : <Dismiss20Filled className='cross-icon'/>}</div></td>
+                        <td><div>{role.canEdit ? <AcceptIcon /> : <Dismiss20Filled className='cross-icon'/>}</div></td>
+                        <td><div>{role.canExport ? <AcceptIcon /> : <Dismiss20Filled className='cross-icon'/>}</div></td>
+                        <td><div>{role.canCreate ? <AcceptIcon /> : <Dismiss20Filled className='cross-icon'/>}</div></td>
                         <td><div><NoteEdit20Regular /></div></td>
                         <td><div><Delete20Regular /></div></td>
                     </tr>

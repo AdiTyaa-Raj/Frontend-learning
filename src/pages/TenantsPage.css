@@ -12,6 +12,7 @@ body {
 }  
  
 .header-row {  
+    padding-top: 15px;
     width: 95%;
     display: flex;  
     align-items: center;  
