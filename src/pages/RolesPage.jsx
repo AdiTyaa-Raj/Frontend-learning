@@ -1,9 +1,14 @@
-
 import React from 'react';
-import { Checkbox, IconButton } from '@fluentui/react';
-import {  AcceptIcon, BlockedIcon } from '@fluentui/react-icons-mdl2';
-import { NoteEdit20Regular, Dismiss20Filled, Delete20Regular, Add20Filled } from "@fluentui/react-icons";
-import './Role.css';  
+import { Checkmark20Filled, NoteEdit20Regular, Dismiss20Filled, Delete20Regular, Add20Filled } from "@fluentui/react-icons";
+import './Role.css';
+import {
+    TableBody,
+    TableCell,
+    TableRow,
+    Table,
+    TableHeader,
+    TableHeaderCell,
+} from "@fluentui/react-components";  
 
 const roles = [
   { role: 'New Role', canView: true, canEdit: true, canExport: false, canCreate: false },
@@ -12,6 +17,16 @@ const roles = [
   { role: 'Owner', canView: true, canEdit: true, canExport: true, canCreate: true },
   { role: 'Viewer', canView: true, canEdit: false, canExport: true, canCreate: false },
 ];
+
+const columns = [  
+    { columnKey: "role", label: "Role" },  
+    { columnKey: "canView", label: "Can View" },  
+    { columnKey: "canEdit", label: "Can Edit" },  
+    { columnKey: "canExport", label: "Can Export" },  
+    { columnKey: "canCreate", label: "Can Create" },  
+    { columnKey: "editRole", label: "Edit Role" },  
+    { columnKey: "deleteRole", label: "Delete Role" },  
+]; 
 
 const Role = () => {
   return (
@@ -23,32 +38,34 @@ const Role = () => {
                 Add New Roles  
             </button>  
         </div>
-        <table className="role-table">
-            <thead>
-                <tr>
-                    <th>Role</th>
-                    <th>Can View</th>
-                    <th>Can Edit</th>
-                    <th>Can Export</th>
-                    <th>Can Create</th>
-                    <th>Edit Role</th>
-                    <th>Delete Role</th>
-                </tr>
-            </thead>
-            <tbody>
-                {roles.map((role, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
-                        <td><div>{role.role}</div></td>
-                        <td><div>{role.canView ? <AcceptIcon /> : <Dismiss20Filled className='cross-icon'/>}</div></td>
-                        <td><div>{role.canEdit ? <AcceptIcon /> : <Dismiss20Filled className='cross-icon'/>}</div></td>
-                        <td><div>{role.canExport ? <AcceptIcon /> : <Dismiss20Filled className='cross-icon'/>}</div></td>
-                        <td><div>{role.canCreate ? <AcceptIcon /> : <Dismiss20Filled className='cross-icon'/>}</div></td>
-                        <td><div><NoteEdit20Regular /></div></td>
-                        <td><div><Delete20Regular /></div></td>
-                    </tr>
+        <Table id="role-table">
+            <TableHeader>
+                <TableRow id='role-table-header'>
+                {columns.map((column) => (
+                    <TableHeaderCell key={column.columnKey}>
+                        {column.label}
+                    </TableHeaderCell>
                 ))}
-            </tbody>
-        </table>
+                </TableRow>
+            </TableHeader>
+            <TableBody id='role-table-body'>
+                {roles.map((item, index) => (
+                <TableRow className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
+                    <TableCell>
+                        {item.role}
+                    </TableCell>
+                    <TableCell>
+                        {item.canView ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }
+                    </TableCell>
+                    <TableCell>{item.canEdit ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</TableCell>
+                    <TableCell>{item.canExport ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</TableCell>  
+                    <TableCell>{item.canCreate ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</TableCell>  
+                    <TableCell><NoteEdit20Regular /></TableCell>  
+                    <TableCell><Delete20Regular /></TableCell>
+                </TableRow>
+                ))}
+            </TableBody>
+        </Table>
     </div>
   );
 };
