@@ -1,0 +1,63 @@
+.role-contents{
+    display: flex;
+    flex-direction: column;
+    width: 90%;  
+    margin: auto;  
+    margin-top: 3%;  
+    padding-bottom: 2%;
+    background-color: #fff;  
+    border-radius: 16px;
+}
+
+.role-header{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.role-header h1{
+    flex-grow: 1;
+    font-weight: 600;
+    font-family: Segoe UI;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: left;
+}
+
+.add-role-button{
+    margin-left: auto;
+    background-color: white;
+    color: #000;
+}
+
+.role-table{
+    width: 95%;  
+    margin: auto;  
+    border-collapse: collapse;
+    border: 1px solid grey;  
+}
+
+.role-table th{
+    padding: 15px;
+    height: 29px;
+    background-color: #E7E9F2;  
+    font-family: Segoe UI;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18.62px;
+    text-align: left;
+}
+.role-table td{
+    padding: 15px;
+}
+
+.even-row {  
+    height: 59px;
+    background-color: #fff;  
+}  
+  
+.odd-row {  
+    height: 59px;
+    background-color: #F5F5F5;  
+} 

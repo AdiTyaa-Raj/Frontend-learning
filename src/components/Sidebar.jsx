@@ -21,19 +21,11 @@ const Sidebar = () => {
                         </div>  
                     </li>  
                     <li>  
-                        <NavLink to="/tenants" className={({ isActive }) => isActive ? "active" : ""}>  
+                        <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>  
                             <div className="icon-container">  
                                 <img src={TenantsIcon} alt="Tenants Icon" className="Tenants-icon" />  
                             </div>  
                             <div className="text-container">Tenants</div>  
-                        </NavLink>  
-                    </li>  
-                    <li>  
-                        <NavLink to="/onboard-admin" className={({ isActive }) => isActive ? "active" : ""}>  
-                            <div className="icon-container">  
-                                <img src={OnboardAdminIcon} alt="OnboardAdmin Icon" className="OnboardAdmin-icon" />  
-                            </div>  
-                            <div className="text-container">Onboard Admin</div>  
                         </NavLink>  
                     </li>  
                     <li>  
