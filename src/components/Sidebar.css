@@ -2,7 +2,6 @@
     width: 20%;
     height: 98vh;
     background-color: #fff;
-    /* border-right: 1px solid #ccc;  */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,15 +35,6 @@
 
 }
 
-.OnboardAdmin-icon{
-    width: 17px;
-    height: 17px;
-    top: 2px;
-    left: 2px;
-    gap: 0px;
-    opacity: 0px;
-
-}
 .Role-icon{
     width: 17.5px;
     height: 16.5px;
@@ -61,10 +51,7 @@
     padding: 20px;
 }
 
-.logo img {
-    height: 40px;
-    margin-right: 10px;
-}
+
 
 .menu {
     width: 100%;
@@ -80,20 +67,32 @@
     width: 100%;
 }
 
-.menu a {
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #ccc;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 22px;
-    text-align: left;
-}
+.menu a {  
+    font-weight: 400;  
+    display: flex;  
+    align-items: center;  
+    padding: 10px 20px; 
+    color: #000;  
+    text-decoration: none;  
+    font-family: 'Segoe UI', sans-serif;  
+    font-size: 14px;  
+    font-weight: 400;  
+    line-height: 20px; 
+    text-align: left;  
+}  
+  
+.menu-item {    
+    display: flex;    
+    align-items: center;    
+    padding: 10px 20px; 
+    color: #000;    
+    text-decoration: none;    
+    font-family: 'Segoe UI', sans-serif;    
+    font-size: 14px;    
+    font-weight: 400;   
+    line-height: 20px;
+    text-align: left;    
+}  
 
 .menu a .icon {
     margin-right: 10px;
@@ -103,17 +102,3 @@
     background-color: #0621741A;  
     font-weight: 600; 
 }  
-
-.menu-item {  
-    display: flex;  
-    align-items: center;  
-    padding: 15px 20px;  
-    color: #000;  
-    text-decoration: none;  
-    border-bottom: 1px solid #ccc;  
-    font-family: 'Segoe UI', sans-serif;  
-    font-size: 14px;  
-    font-weight: 400; 
-    line-height: 22px;  
-    text-align: left;  
-} 

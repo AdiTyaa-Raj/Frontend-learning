@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkmark20Filled, NoteEdit20Regular, Dismiss20Filled, Delete20Regular, Add20Filled } from "@fluentui/react-icons";
+import { Checkmark20Filled, Edit20Regular, Dismiss20Filled, Delete20Regular, Add20Filled } from "@fluentui/react-icons";
 import './Role.css';
 import {
     TableBody,
@@ -43,7 +43,7 @@ const Role = () => {
                 <TableRow id='role-table-header'>
                 {columns.map((column) => (
                     <TableHeaderCell key={column.columnKey}>
-                        {column.label}
+                      <div className='role-table-elements' > {column.label} </div>
                     </TableHeaderCell>
                 ))}
                 </TableRow>
@@ -52,16 +52,16 @@ const Role = () => {
                 {roles.map((item, index) => (
                 <TableRow className={index % 2 === 0 ? 'even-row' : 'odd-row'}>
                     <TableCell>
-                        {item.role}
+                      <div className='role-table-elements' > {item.role}</div>
                     </TableCell>
                     <TableCell>
-                        {item.canView ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }
+                        <div className='role-table-elements' >{item.canView ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</div>
                     </TableCell>
-                    <TableCell>{item.canEdit ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</TableCell>
-                    <TableCell>{item.canExport ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</TableCell>  
-                    <TableCell>{item.canCreate ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</TableCell>  
-                    <TableCell><NoteEdit20Regular /></TableCell>  
-                    <TableCell><Delete20Regular /></TableCell>
+                    <TableCell><div className='role-table-elements' >{item.canEdit ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</div></TableCell>
+                    <TableCell><div className='role-table-elements' >{item.canExport ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</div></TableCell>  
+                    <TableCell><div className='role-table-elements' >{item.canCreate ? <Checkmark20Filled /> : <Dismiss20Filled className='cross-icon'/> }</div></TableCell>  
+                    <TableCell><div className='role-table-elements' ><Edit20Regular /></div></TableCell>  
+                    <TableCell><div className='role-table-elements' ><Delete20Regular /></div></TableCell>
                 </TableRow>
                 ))}
             </TableBody>

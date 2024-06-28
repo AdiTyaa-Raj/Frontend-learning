@@ -11,6 +11,7 @@
   overflow-y: auto; 
   width: 80%;
 }
+
 .main-body{
   display: flex;
   flex-direction: row;

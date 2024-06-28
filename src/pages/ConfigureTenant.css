@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f3f2f1;
+    padding: 20px;
+  }
+  
+  .usersSection {
+    /* flex: 0 0 30%; */
+    width: 30%;
+    background-color: white;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  
+  .assetsSection {
+    flex: 0 0 60%;
+    background-color: white;
+    padding: 10px;
+  }
+
+.header-back-button{
+    color: #000;
+    background-color: #f3f2f1;  
+    border-color: white;  
+    display: flex; 
+    align-items: center; 
+    padding: 5px 10px; 
+    border: none; 
+    cursor: pointer; 
+}
+  
