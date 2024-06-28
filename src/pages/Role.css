@@ -32,7 +32,7 @@
     padding: 5px 10px; 
     border: none; 
     cursor: pointer; 
-  }  
+}  
     
 .add-role-button .add-icon {  
     margin-right: 8px;  
@@ -47,16 +47,16 @@
     outline: none;  
 }  
 
-.role-table{
+#role-table{
     width: 95%;  
     margin: auto;  
     border-collapse: collapse;
     border: 1px solid grey;  
 }
 
-.role-table th{
+#role-table-header{
     padding: 15px;
-    height: 29px;
+    height: 59px;
     background-color: #E7E9F2;  
     font-family: Segoe UI;
     font-size: 14px;
@@ -64,7 +64,7 @@
     line-height: 18.62px;
     text-align: left;
 }
-.role-table td{
+#role-table-body{
     padding: 15px;
 }
 
