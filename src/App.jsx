@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar';
 import Navbar from './components/Navbar';
 import TenantsPage from './pages/TenantsPage';
 import RolesPage from './pages/RolesPage';
+import ConfigureTenant from './pages/ConfigureTenant';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                         <Routes>
                             <Route path="/" element={<TenantsPage />} />
                             <Route path="/roles" element={<RolesPage />} />
+                            <Route path="/configure" element = {<ConfigureTenant />} />
                         </Routes>
                     </div> 
                 </div>

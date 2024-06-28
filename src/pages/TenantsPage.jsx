@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { TextField} from '@fluentui/react';  
 import './TenantsPage.css';  
 import Modal from './popup';  
-import { NoteEdit20Regular, Delete20Regular, ArrowClockwise20Regular, Search20Filled  } from "@fluentui/react-icons";  
+import { Edit20Regular, Delete20Regular, ArrowClockwise20Regular, Search20Filled  } from "@fluentui/react-icons";  
 
 const tenantsData = [  
     { name: 'Eve', link: 'https://app.powerbi.com/', capacity: 'Adam Smith' },  
@@ -66,7 +66,7 @@ const Tenant = () => {
                             <td><a class="tenant-link" href={tenant.link}>{tenant.link}</a></td>  
                             <td><div class="tenant-capacity">{tenant.capacity}</div></td>  
                             <td>  
-                                <NoteEdit20Regular />  
+                                <Edit20Regular />  
                                 <Delete20Regular />  
                             </td>  
                             <td>  

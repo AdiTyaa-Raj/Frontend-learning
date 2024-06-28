@@ -12,23 +12,26 @@ const Sidebar = () => {
         <div className="sidebar">  
             <div className="menu">  
                 <ul>  
-                    <li>  
+                    <li >  
                         <div className="menu-item non-selectable">  
                             <div className="icon-container">  
                                 <img src={AdminIcon} alt="Admin Icon" className="Admin-icon" />  
                             </div>  
                             <div>Admin</div>  
                         </div>  
-                    </li>  
-                    <li>  
-                        <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>  
-                            <div className="icon-container">  
-                                <img src={TenantsIcon} alt="Tenants Icon" className="Tenants-icon" />  
-                            </div>  
-                            <div className="text-container">Tenants</div>  
-                        </NavLink>  
-                    </li>  
-                    <li>  
+                    </li>
+                    <div className='sidebar-options'>  
+                        <li >  
+                            <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>  
+                                <div className="icon-container">  
+                                    <img src={TenantsIcon} alt="Tenants Icon" className="Tenants-icon" />  
+                                </div>  
+                                <div className="text-container">Tenants</div>  
+                            </NavLink>  
+                        </li>  
+                    </div>
+                    <div className='sidebar-options'>  
+                    <li >  
                         <NavLink to="/roles" className={({ isActive }) => isActive ? "active" : ""}>  
                             <div className="icon-container">  
                                 <img src={roleIcon} alt="Role Icon" className="Role-icon" />  
@@ -36,6 +39,7 @@ const Sidebar = () => {
                             <div className="text-container">Roles</div>  
                         </NavLink>  
                     </li>  
+                    </div>
                 </ul>  
             </div>  
         </div>  
