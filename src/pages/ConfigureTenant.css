@@ -58,9 +58,6 @@
 .search-bar{
   margin-top: 10px;
   height: 28px;
-  /* top: 23px; */
-  /* left: 24px; */
-  /* gap: 10px; */
   border-radius: 4px;
   border: 1px;
   border-color: #DDDDDD;
@@ -183,6 +180,8 @@
 
 .tenant-access-dropdown {
   /* padding: 15px; */
+  display: flex;
+  justify-content: flex-start;
   background-color: white;
   color: #000;
 }
@@ -215,6 +214,7 @@
   line-height: 18.62px;
   height: 54px;
 } 
+
 .asset-heading{
   font-family: Segoe UI;
   font-size: 18px;
@@ -222,4 +222,48 @@
   line-height: 24.3px;
   text-align: left;
 
+}
+.tenant-access-wrapper {  
+  display: flex;  
+  align-items: center;
+  margin-left: auto;
+}
+
+.modalContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.modalContent {
+  width: 50%;
+  height: 20%;
+  padding: 20px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modalHeader {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.configure-button, .cancel-button {
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-left: 10px;
 }
